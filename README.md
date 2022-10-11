@@ -9,7 +9,7 @@ Keep a journal for your home. Users log in to enter pictures, details, and tags 
 
 **Tech used:** Mongoose, Express, Bootstrap, Node
 
-* MVC architecture
+Compartmentalized build using MVC architecture. 
 
 ## Future Optimizations
 
