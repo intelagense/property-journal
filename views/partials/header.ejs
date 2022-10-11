@@ -36,8 +36,20 @@
   </head>
   <body>
     <header class="container">
-      <div class="text-center">
-        <h1 class=""><a href="/profile">Property Journal</a></h1>
-        <span>Keep a journal for your home</span>
+      <div class="row align-items-center">
+        <div class="col-3 text-center">
+        </div>
+        <div class="col-6 text-center">
+          <h1 class=""><a href="/feed">Property Journal</a></h1>
+          <span>Keep a journal for your home</span>
+        </div>
+      
+        <div class="col-3 align-items-end text-end">
+          <% if (typeof user !== 'undefined') { %>
+          <p class="mb-0 align-self-end"><%= user.userName %></p>
+          
+          <a href="/logout" class="btn btn-sm btn-primary">Logout</a>
+          <% } %>
+        </div>
       </div>
     </header>

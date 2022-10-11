@@ -1,52 +1,74 @@
 <%- include('partials/header') -%>
 <div class="container">
   <div class="row mt-5">
-      <div class="col-6">
-          <div>
-              <p><strong>User Name</strong>: <%= user.userName %></p>
-              <p><strong>Email</strong>: <%= user.email %></p>
-              <a href="/logout" class="col-3 btn btn-primary">Logout</a>
-          </div>
-          <div class="mt-5">
-            <h2>Add an entry</h2>
+    <section class="mb-4">
+      <!--Section heading-->
+      <h2 class="h1-responsive font-weight-bold my-4">Add an entry:</h2>
+        <div class="row">
+          <!--Grid column-->
+          <div class="col-md-9 mb-md-0 mb-5">
             <form action="/post/createPost" enctype="multipart/form-data" method="POST">
-              <div class="mb-3">
-                <label for="title" class="form-label">Title</label>
-                <input type="text" class="form-control" id="title" name="title" required>
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="title" class="form-label">Title</label>
+                    <input type="text" class="form-control" id="title" name="title" required>
+                  </div>
+                </div>
+                <!--Grid column-->
+                <div class="col-md-6">
+                  <div class="mb-3">
+                    <label for="date" class="form-label">Date</label>
+                    <input type="date" class="form-control" id="date" name="date">
+                  </div>
+                </div>
               </div>
-              <div class="mb-3">
-                  <label for="title" class="form-label">Tags</label>
-                  <select class="form-control" id="tags" name="tags" multiple>
-                    <option value="appliances">Appliances</option>
-                    <option value="bathroom">Bathroom</option>
-                    <option value="electrical">Electrical</option>
-                    <option value="hvac">HVAC</option>
-                    <option value="kitchen">Kitchen</option>
-                    <option value="landscaping">Landscaping</option>
-                    <option value="painting">Painting</option>
-                    <option value="plumbing">Plumbing</option>
-                    <option value="pool">Pool</option>
-                    <option value="roofing">Roofing</option>
-                    <option value="other">Other</option>
-                  </select>
+              <!--Grid row-->
+              <div class="row">
+                <div class="col-md-12">
+                  <div class="mb-3">
+                    <label for="imgUpload" class="form-label">Image</label>
+                    <input type="file" class="form-control" id="imageUpload" name="file">
+                  </div>
+                </div>
               </div>
-              <div class="mb-3">
-                <label for="notes" class="form-label">Notes</label>
-                <textarea class="form-control" id="notes" name="notes"></textarea>
+              <!--Grid row-->
+              <div class="row">
+                <!--Grid column-->
+                  <div class="col-md-12">
+                    <div class="mb-3">
+                      <label for="notes" class="form-label">Notes</label>
+                      <textarea class="form-control" id="notes" name="notes"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary" value="Upload">Add it</button>
+                  </div>
               </div>
-              <div class="mb-3">
-                <label for="imgUpload" class="form-label">Image</label>
-                <input type="file" class="form-control" id="imageUpload" name="file">
-              </div>
-              <div class="mb-3">
-                <label for="date" class="form-label">Date</label>
-                <input type="date" class="form-control" id="date" name="date">
-              </div>
-              <button type="submit" class="btn btn-primary" value="Upload">Submit</button>
             </form>
           </div>
-      </div>
-      <div class="col-6">
+          <!--Grid column-->
+          <div class="col-md-3 ">
+            <label for="title" class="form-label">Tags</label>
+              <select class="form-control select" size="11" id="tags" name="tags" multiple>
+                <option value="appliances">Appliances</option>
+                <option value="bathroom">Bathroom</option>
+                <option value="electrical">Electrical</option>
+                <option value="hvac">HVAC</option>
+                <option value="kitchen">Kitchen</option>
+                <option value="landscaping">Landscaping</option>
+                <option value="painting">Painting</option>
+                <option value="plumbing">Plumbing</option>
+                <option value="pool">Pool</option>
+                <option value="roofing">Roofing</option>
+                <option value="other">Other</option>
+              </select>
+          </div>
+        </div>
+      </section>
+
+      <h3 class="mt-5">Recent Entries:</h3>
+      <div class="col-12">
         <ul class="row list-unstyled">
         <% for(var i=0; i<posts.length; i++) {%>
           <li class="col-6 justify-content-between mt-5">
@@ -59,10 +81,13 @@
           </li>
         <% } %>
         </ul>
-        <div class="row justify-content-center mt-5">
-          <a class="btn btn-primary" href="/feed">Return to Feed</a>
+        <div class="row mt-5">
+          <div class="col">
+            <a class="mb-5 btn btn-primary" href="/feed">Return to the list</a>
+          </div>
         </div>  
-      </div>  
+      </div>
+
     </div>
   </div>
 </div>
