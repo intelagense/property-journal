@@ -2,11 +2,11 @@
 
 > Keep a journal for your home. 
 
-*Currently migrating hosting*
-
 ![screenshot](/assets/propertyjournal.png)
 
 A helpful tool for homeowners to manage and keep track of their property records. After logging in to the site, users are be able to store information about their home, including details such as pictures, dates, and descriptions of repairs, upgrades, and purchases. This information is organized using category tags, making it easy for users to find what they are looking for. In addition to helping homeowners keep track of their records, this site is also useful for documenting the history and value of a property.
+
+[Property Journal](https://property-journal.cyclic.app/)
 
 ## How It's Made:
 
