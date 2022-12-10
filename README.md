@@ -1,23 +1,28 @@
 # Property Journal
-Keep a journal for your home. Users log in to enter pictures, details, and tags for everything they want to track in their home. 
 
-**Link to project:** https://property-journal-production.up.railway.app/
+> Keep a journal for your home. 
+
+*Currently migrating hosting*
 
 ![screenshot](/assets/propertyjournal.png)
 
+A helpful tool for homeowners to manage and keep track of their property records. After logging in to the site, users are be able to store information about their home, including details such as pictures, dates, and descriptions of repairs, upgrades, and purchases. This information is organized using category tags, making it easy for users to find what they are looking for. In addition to helping homeowners keep track of their records, this site is also useful for documenting the history and value of a property.
+
 ## How It's Made:
 
-**Tech used:** Mongoose, Express, Bootstrap, Node
+**Front end:** HTML, CSS, JavaScript, Bootstrap
 
-Compartmentalized build using MVC architecture. 
+**Back end:** Node, Express, MongoDB, Mongoose, Cloudinary, Passport
+
+Compartmentalized build using MVC architecture. Users are authenicated using Passport.js. Images and photes are uploaded to Cloudinary using multer forms and are keyed into the Mongo database. 
 
 ## Future Optimizations
 
 * UI/UX Redesign for easier navigation.
-* Building out a mobile interface using React Native.
+  * Building out mobile friendly interface.
 * Further refinement of database model and input fields through user testing.
-* Sharing and managing multiple properties.
-
+* Managing multiple properties with multiple user access.
+* Implement guest/unique demo account with session storage.
 
 ## Installation
 You will need a Cloudinary and MongoDB account.
