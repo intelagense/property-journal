@@ -1,7 +1,7 @@
 {
-  "name": "binary-upload-boom",
+  "name": "property-journal",
   "version": "1.0.0",
-  "description": "100Devs Social Network",
+  "description": "Keep a journal for your home.",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
